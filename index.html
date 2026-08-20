@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WeNet / ASR 学习笔记：FBank、CTC、Attention、Transformer、Conformer 与源码学习。" />
+  <title>WeNet Learning Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">W</div>
+      <div>
+        <strong>WeNet Learning</strong>
+        <span>ASR 学习路线</span>
+      </div>
+    </div>
+    <nav id="nav">
+      <button class="nav-item active" data-note="notes/day1-fbank.md">
+        <span class="num">01</span><span><b>语音特征与 FBank</b><small>Waveform → Log-Mel</small></span>
+      </button>
+      <button class="nav-item" data-note="notes/day2-ctc-attention.md">
+        <span class="num">02</span><span><b>CTC 与 Attention</b><small>Loss · Beam · Rescoring</small></span>
+      </button>
+      <button class="nav-item" data-note="notes/day3-transformer-attention.md">
+        <span class="num">03</span><span><b>Transformer Attention</b><small>QKV · Multi-Head</small></span>
+      </button>
+    </nav>
+    <div class="sidebar-foot">
+      <p>学习原则</p>
+      <span>理论 → 数学 → 代码 → WeNet 源码</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <span class="eyebrow">Speech Recognition · Week 1</span>
+        <h1>WeNet 学习笔记</h1>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="切换主题">◐</button>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="pill">Current · Transformer / Attention</span>
+        <h2>从声学特征开始，真正读懂 WeNet。</h2>
+        <p>把碎片化的 ASR 知识串成完整工程链路：Waveform → FBank → Encoder → CTC / Attention → Decode → Conformer → 源码。</p>
+      </div>
+      <div class="hero-flow" aria-label="学习流程">
+        <span>WAV</span><i>→</i><span>FBank</span><i>→</i><span>Encoder</span><i>→</i><span>CTC / Attn</span>
+      </div>
+    </section>
+
+    <article id="content" class="content"><div class="loading">正在加载笔记…</div></article>
+    <footer>Built for WeNet / ASR study · Markdown + MathJax + Mermaid</footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
